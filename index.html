@@ -1,0 +1,2644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENERGY+ - Clean Dashboard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>ENERGY<span class="plus">+</span></h1>
+                    <p>Marketing automation platform for energy companies.</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="content-calendar">
+                        <i class="fas fa-calendar"></i>
+                        <span>Content Calendar</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="automation-hub">
+                        <i class="fas fa-bolt"></i>
+                        <span>Automation Hub</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="ai-virtual-assistant">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Virtual Assistant</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="ai-content-generation">
+                        <i class="fas fa-magic"></i>
+                        <span>AI Content Generation</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="marketing-tracker">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Marketing Tracker</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">
+                        <i class="fas fa-address-book"></i>
+                        <span>Contact</span>
+                    </a></li>
+                    <li><a href="#" class="nav-link" data-page="installation">
+                        <i class="fas fa-cogs"></i>
+                        <span>Installation</span>
+                    </a></li>
+            </nav>
+            
+            <!-- AI Credits Section -->
+            <div class="ai-credits">
+                <div class="credits-header">
+                    <span>AI Credits</span>
+                </div>
+                <div class="credits-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="credits-info">
+                    <span>localhost:3000/#</span>
+                    <div class="weather-info">
+                        <i class="fas fa-cloud"></i>
+                        <span>12°C Mostly cloudy</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search campaigns, content, workflows...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="btn-icon">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Dashboard Page -->
+                <div class="page active" id="dashboard">
+                    <div class="page-header">
+                        <h2>Dashboard</h2>
+                        <p>Welcome to ENERGY+ Marketing Platform</p>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-chart-line"></i> Analytics</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Track your marketing performance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-users"></i> Leads</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Manage your lead pipeline</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Calendar Page -->
+                <div class="page" id="content-calendar">
+                    <div class="page-header">
+                        <h2><i class="fas fa-calendar"></i> Content Calendar</h2>
+                        <p>Plan and schedule your content across all platforms</p>
+                    </div>
+                    
+                    <!-- Calendar Controls -->
+                    <div class="calendar-controls">
+                        <div class="month-navigation">
+                            <button class="nav-btn" id="prev-month">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <h3 id="current-month">December 2024</h3>
+                            <button class="nav-btn" id="next-month">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            </div>
+                        <div class="calendar-actions">
+                            <button class="btn-primary" id="add-content">
+                                <i class="fas fa-plus"></i>
+                                Add Content
+                            </button>
+                            <button class="btn-secondary" id="view-mode">
+                                <i class="fas fa-th"></i>
+                                Month View
+                            </button>
+                                </div>
+                            </div>
+                    
+                    <!-- Calendar Board -->
+                    <div class="calendar-board">
+                        <!-- Calendar Header -->
+                        <div class="calendar-header">
+                            <div class="day-header">Sun</div>
+                            <div class="day-header">Mon</div>
+                            <div class="day-header">Tue</div>
+                            <div class="day-header">Wed</div>
+                            <div class="day-header">Thu</div>
+                            <div class="day-header">Fri</div>
+                            <div class="day-header">Sat</div>
+                        </div>
+                        
+                        <!-- Calendar Grid -->
+                        <div class="calendar-grid" id="calendar-grid">
+                            <!-- Calendar days will be generated by JavaScript -->
+                            </div>
+                                </div>
+                    
+                    <!-- Content Types Legend -->
+                    <div class="content-legend">
+                        <h4>Content Types</h4>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-color instagram"></div>
+                                <span>Instagram Post</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color facebook"></div>
+                                <span>Facebook Post</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color linkedin"></div>
+                                <span>LinkedIn Article</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color youtube"></div>
+                                <span>YouTube Video</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color tiktok"></div>
+                                <span>TikTok Video</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color twitter"></div>
+                                <span>Twitter Post</span>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                        
+                <!-- Automation Hub Page -->
+                <div class="page" id="automation-hub">
+                    <div class="page-header">
+                        <h2><i class="fas fa-bolt"></i> Automation Hub</h2>
+                        <p>Manage your marketing workflows and automation rules</p>
+                            </div>
+                    
+                    <div class="search-bar automation-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search campaigns, content, workflows... (Ctrl+K)">
+                                </div>
+                    
+                    <div class="automation-grid">
+                        <div class="automation-card">
+                            <div class="card-icon scheduler">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Auto-Post Scheduler</h3>
+                                <p>Automatically publish scheduled content across platforms</p>
+                            </div>
+                            <div class="card-status">
+                                <span class="status-text">Status • Active</span>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                        <div class="automation-card">
+                            <div class="card-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Email Campaigns</h3>
+                                <p>Trigger personalized email sequences based on user behavior</p>
+                            </div>
+                            <div class="card-status">
+                                <span class="status-text">Status • Active</span>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-card">
+                            <div class="card-icon trends">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Trend Monitoring</h3>
+                                <p>Track trending topics and alert when relevant trends appear</p>
+                            </div>
+                            <div class="card-status">
+                                <span class="status-text">Status • Inactive</span>
+                                <div class="toggle-switch">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-card">
+                            <div class="card-icon chatbot">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>AI Response Bot</h3>
+                                <p>Auto-respond to common inquiries with AI-generated messages</p>
+                            </div>
+                            <div class="card-status">
+                                <span class="status-text">Status • Active</span>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Virtual Assistant Page -->
+                <div class="page" id="ai-virtual-assistant">
+                    <div class="page-header">
+                        <h2>AI Virtual Assistant</h2>
+                        <p>Intelligent automation tools for your business</p>
+                    </div>
+                    
+                    <!-- AI Tools Tabs -->
+                    <div class="ai-tools-tabs">
+                        <button class="ai-tab-btn active" data-ai-tab="lead-finder">
+                            <i class="fas fa-search-location"></i>
+                            Lead Finder
+                        </button>
+                        <button class="ai-tab-btn" data-ai-tab="ai-dialer">
+                            <i class="fas fa-phone"></i>
+                            AI Dialer
+                        </button>
+                        <button class="ai-tab-btn" data-ai-tab="ai-chatbot">
+                            <i class="fas fa-comments"></i>
+                            AI Chatbot
+                        </button>
+                    </div>
+                    
+                    <!-- Lead Finder Tab -->
+                    <div class="ai-tab-content active" id="lead-finder-tab">
+                    <div class="leadfinder-section">
+                        <div class="leadfinder-layout">
+                            <!-- Map Container (75%) -->
+                            <div class="map-container">
+                                <div class="map-header">
+                                    <h3><i class="fas fa-map-marked-alt"></i> Lead Discovery Map</h3>
+                                </div>
+                                <div id="leadfinder-map" class="leadfinder-map">
+                                    <div class="static-map">
+                                        <div class="map-grid">
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                            <div class="map-tile"></div>
+                                        </div>
+                                        <div class="map-markers">
+                                            <div class="map-marker residential" style="top: 20%; left: 30%;" data-lead="1">
+                                                <i class="fas fa-home"></i>
+                                            </div>
+                                            <div class="map-marker commercial" style="top: 40%; left: 60%;" data-lead="2">
+                                                <i class="fas fa-building"></i>
+                                            </div>
+                                            <div class="map-marker high-potential" style="top: 70%; left: 25%;" data-lead="3">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="map-marker residential" style="top: 50%; left: 80%;" data-lead="4">
+                                                <i class="fas fa-home"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-marker residential"></div>
+                                        <span>Residential</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-marker commercial"></div>
+                                        <span>Commercial</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-marker high-potential"></div>
+                                        <span>High Potential</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lead Finder Panel (25%) -->
+                            <div class="leadfinder-panel">
+                                <div class="panel-header">
+                                    <h3><i class="fas fa-search"></i> AI Lead Finder</h3>
+                                    <div class="panel-status">
+                                        <span class="status-dot connected"></span>
+                                        <span>Active</span>
+                                    </div>
+                                </div>
+
+                                <div class="panel-content">
+                                    <!-- Search Section -->
+                                    <div class="search-section">
+                                        <div class="search-input-group">
+                                            <input type="text" id="location-search" placeholder="Search locations...">
+                                            <button class="btn-find-leads" onclick="findLeads()">
+                                                <i class="fas fa-search"></i>
+                                                Find Leads
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Filters Section -->
+                                    <div class="filters-section">
+                                        <h4>Filters</h4>
+                                        <div class="filter-group">
+                                            <label class="filter-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark"></span>
+                                                Residential
+                                            </label>
+                                            <label class="filter-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark"></span>
+                                                Commercial
+                                            </label>
+                                            <label class="filter-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark"></span>
+                                                High Potential
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Results Section -->
+                                    <div class="results-section">
+                                        <div class="results-header">
+                                            <h4>Results</h4>
+                                            <span class="results-count">4 leads found</span>
+                                        </div>
+                                        <div class="leads-list">
+                                            <div class="lead-item" data-lead-id="1">
+                                                <div class="lead-name">Green Energy Solutions</div>
+                                                <div class="lead-type">Residential</div>
+                                                <div class="lead-location">Lagos, Nigeria</div>
+                                                <div class="lead-potential high">High Potential</div>
+                                            </div>
+                                            <div class="lead-item" data-lead-id="2">
+                                                <div class="lead-name">Solar Tech Corp</div>
+                                                <div class="lead-type">Commercial</div>
+                                                <div class="lead-location">Abuja, Nigeria</div>
+                                                <div class="lead-potential medium">Medium Potential</div>
+                                            </div>
+                                            <div class="lead-item" data-lead-id="3">
+                                                <div class="lead-name">Wind Power Ltd</div>
+                                                <div class="lead-type">High Potential</div>
+                                                <div class="lead-location">Port Harcourt, Nigeria</div>
+                                                <div class="lead-potential high">High Potential</div>
+                                            </div>
+                                            <div class="lead-item" data-lead-id="4">
+                                                <div class="lead-name">Eco Homes</div>
+                                                <div class="lead-type">Residential</div>
+                                                <div class="lead-location">Kano, Nigeria</div>
+                                                <div class="lead-potential low">Low Potential</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- AI Dialer Tab -->
+                    <div class="ai-tab-content" id="ai-dialer-tab">
+                        <div class="ai-dialer-section">
+                            <!-- Advanced Control Panel -->
+                            <div class="tesla-control-panel">
+                                <div class="control-header">
+                                    <h3><i class="fas fa-phone"></i> AI Dialer Pro</h3>
+                                    <div class="power-indicator">
+                                        <div class="power-toggle" id="power-toggle">
+                                            <div class="power-button"></div>
+                                        </div>
+                                        <span class="power-status">System Online</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mode-selector">
+                                    <button class="mode-btn active" data-mode="manual">Manual</button>
+                                    <button class="mode-btn" data-mode="auto">Auto</button>
+                                    <button class="mode-btn" data-mode="campaign">Campaign</button>
+                                    <button class="mode-btn" data-mode="training">Training</button>
+                                </div>
+                            </div>
+
+                            <!-- Smart Contact Search -->
+                            <div class="smart-search-section">
+                                <div class="search-header">
+                                    <h4>Smart Contact Search</h4>
+                                    <button class="voice-search-btn" onclick="startVoiceSearch()">
+                                        <i class="fas fa-microphone"></i>
+                                    </button>
+                                </div>
+                                <div class="search-input-group">
+                                    <input type="text" id="contact-search" placeholder="Search contacts or say 'Call John Smith'">
+                                    <button class="search-btn" onclick="searchContacts()">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div class="contact-suggestions" id="contact-suggestions"></div>
+                            </div>
+
+                            <!-- Main Dialing Interface -->
+                            <div class="dialer-interface">
+                                <div class="phone-input-group">
+                                    <label>Phone Number:</label>
+                                    <input type="tel" id="phone-input" placeholder="+1 (555) 123-4567">
+                                    <button class="dial-btn" onclick="startCall()">Call</button>
+                                </div>
+                                
+                                <div class="call-controls">
+                                    <button class="call-btn answer-btn" onclick="answerCall()">
+                                        <i class="fas fa-phone"></i>
+                                    </button>
+                                    <button class="call-btn hangup-btn" onclick="endCall()">
+                                        <i class="fas fa-phone-slash"></i>
+                                    </button>
+                                    <button class="call-btn mute-btn" onclick="toggleMute()">
+                                        <i class="fas fa-microphone-slash"></i>
+                                    </button>
+                                    <button class="call-btn record-btn" onclick="toggleRecording()">
+                                        <i class="fas fa-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- AI Features Panel -->
+                            <div class="ai-features-panel">
+                                <div class="feature-toggles">
+                                    <div class="toggle-item">
+                                        <label>AI Script Assistant</label>
+                                        <div class="tesla-toggle" id="script-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-item">
+                                        <label>Sentiment Analysis</label>
+                                        <div class="tesla-toggle" id="sentiment-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-item">
+                                        <label>Call Transcription</label>
+                                        <div class="tesla-toggle" id="transcription-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-item">
+                                        <label>Auto Follow-up</label>
+                                        <div class="tesla-toggle" id="followup-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Live Analytics -->
+                            <div class="live-analytics">
+                                <div class="analytics-header">
+                                    <h4>Live Call Analytics</h4>
+                                    <div class="call-status" id="call-status">Ready</div>
+                                </div>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="call-duration">00:00</div>
+                                        <div class="metric-label">Duration</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="sentiment-score">Neutral</div>
+                                        <div class="metric-label">Sentiment</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="lead-score">85%</div>
+                                        <div class="metric-label">Lead Score</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="call-quality">Excellent</div>
+                                        <div class="metric-label">Quality</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AI Script Suggestions -->
+                            <div class="ai-script-panel" id="script-panel">
+                                <div class="script-header">
+                                    <h4>AI Script Assistant</h4>
+                                    <button class="refresh-script-btn" onclick="refreshScript()">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </div>
+                                <div class="script-content" id="script-content">
+                                    <div class="script-suggestion">
+                                        <strong>Opening:</strong> "Hi, this is [Your Name] from EnergyPlus. I'm calling about your recent inquiry regarding solar energy solutions..."
+                                    </div>
+                                    <div class="script-suggestion">
+                                        <strong>Objection Handler:</strong> "I understand your concern about cost. Let me show you how our financing options can actually save you money..."
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Call History with Advanced Features -->
+                            <div class="call-history">
+                                <div class="history-header">
+                                    <h4>Call History & Analytics</h4>
+                                    <div class="history-controls">
+                                        <button class="export-btn" onclick="exportHistory()">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="clear-btn" onclick="clearHistory()">Clear</button>
+                                    </div>
+                                </div>
+                                <div class="call-list" id="call-list">
+                                    <div class="call-item">
+                                        <div class="call-info">
+                                            <div class="contact-name">John Smith</div>
+                                            <div class="contact-number">+1 (555) 123-4567</div>
+                                            <div class="call-time">2 min ago</div>
+                                        </div>
+                                        <div class="call-analytics">
+                                            <div class="call-duration">3:45</div>
+                                            <div class="call-outcome success">Converted</div>
+                                            <div class="lead-score">92%</div>
+                                        </div>
+                                        <div class="call-actions">
+                                            <button class="action-btn" onclick="redialCall('+15551234567', 'John Smith')">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                            <button class="action-btn" onclick="viewCallDetails('call-1')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="call-item">
+                                        <div class="call-info">
+                                            <div class="contact-name">Sarah Johnson</div>
+                                            <div class="contact-number">+1 (555) 987-6543</div>
+                                            <div class="call-time">5 min ago</div>
+                                        </div>
+                                        <div class="call-analytics">
+                                            <div class="call-duration">1:23</div>
+                                            <div class="call-outcome pending">Follow-up</div>
+                                            <div class="lead-score">67%</div>
+                                        </div>
+                                        <div class="call-actions">
+                                            <button class="action-btn" onclick="redialCall('+15559876543', 'Sarah Johnson')">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                            <button class="action-btn" onclick="viewCallDetails('call-2')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Chatbot Tab -->
+                    <div class="ai-tab-content" id="ai-chatbot-tab">
+                        <div class="chatbot-section">
+                            <div class="chatbot-header">
+                                <h3><i class="fas fa-comments"></i> AI Chatbot</h3>
+                                <div class="chatbot-status">
+                                    <span class="status-dot active"></span>
+                                    <span>Online</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chatbot-interface">
+                                <div class="chat-container">
+                                    <div class="chat-messages" id="chat-messages">
+                                        <div class="message bot-message">
+                                            <div class="message-avatar">
+                                                <i class="fas fa-robot"></i>
+                                            </div>
+                                            <div class="message-content">
+                                                Hello! I'm your AI assistant. How can I help you with your energy needs today?
+                                            </div>
+                                            <div class="message-time">10:30 AM</div>
+                                        </div>
+                                        <div class="message user-message">
+                                            <div class="message-content">
+                                                I'm interested in solar panels for my home
+                                            </div>
+                                            <div class="message-time">10:32 AM</div>
+                                        </div>
+                                        <div class="message bot-message">
+                                            <div class="message-avatar">
+                                                <i class="fas fa-robot"></i>
+                                            </div>
+                                            <div class="message-content">
+                                                Great! I can help you with solar panel information. What's your approximate roof size and energy consumption?
+                                            </div>
+                                            <div class="message-time">10:32 AM</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="chat-input-section">
+                                        <div class="quick-responses">
+                                            <button class="quick-response" onclick="sendQuickResponse('Tell me about solar panels')">
+                                                <i class="fas fa-solar-panel"></i>
+                                                Solar Panels
+                                            </button>
+                                            <button class="quick-response" onclick="sendQuickResponse('What are your energy rates?')">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                Energy Rates
+                                            </button>
+                                            <button class="quick-response" onclick="sendQuickResponse('Schedule consultation')">
+                                                <i class="fas fa-calendar"></i>
+                                                Consultation
+                                            </button>
+                                            <button class="quick-response" onclick="sendQuickResponse('Wind energy options')">
+                                                <i class="fas fa-wind"></i>
+                                                Wind Energy
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="message-input-group">
+                                            <input type="text" id="message-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                                            <button class="btn-send" onclick="sendMessage()">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="chat-controls">
+                                            <button class="control-btn" onclick="clearChat()">
+                                                <i class="fas fa-trash"></i>
+                                                Clear Chat
+                                            </button>
+                                            <button class="control-btn" onclick="exportChat()">
+                                                <i class="fas fa-download"></i>
+                                                Export
+                                            </button>
+                                            <button class="control-btn" onclick="toggleTyping()">
+                                                <i class="fas fa-keyboard"></i>
+                                                Typing: <span id="typing-status">ON</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chatbot-settings">
+                                    <h4>Bot Settings</h4>
+                                    <div class="settings-group">
+                                        <label class="setting-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Auto-respond to common questions
+                                        </label>
+                                        <label class="setting-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Learn from conversations
+                                        </label>
+                                        <label class="setting-item">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            Escalate to human when needed
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- AI Dialer Tab -->
+                    <div class="ai-tab-content" id="ai-dialer-tab">
+                        <div class="ai-dialer-section">
+                            <!-- Advanced Control Panel -->
+                            <div class="tesla-control-panel">
+                                <div class="control-header">
+                                    <h3><i class="fas fa-phone"></i> AI Dialer Pro</h3>
+                                    <div class="power-indicator">
+                                        <div class="power-toggle" id="power-toggle">
+                                            <div class="power-button"></div>
+                                        </div>
+                                        <span class="power-status">System Online</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mode-selector">
+                                    <button class="mode-btn active" data-mode="manual">Manual</button>
+                                    <button class="mode-btn" data-mode="auto">Auto</button>
+                                    <button class="mode-btn" data-mode="campaign">Campaign</button>
+                                    <button class="mode-btn" data-mode="training">Training</button>
+                                </div>
+                            </div>
+
+                            <!-- Smart Contact Search -->
+                            <div class="smart-search-section">
+                                <div class="search-header">
+                                    <h4>Smart Contact Search</h4>
+                                    <button class="voice-search-btn" onclick="startVoiceSearch()">
+                                        <i class="fas fa-microphone"></i>
+                                    </button>
+                                </div>
+                                <div class="search-input-group">
+                                    <input type="text" id="contact-search" placeholder="Search contacts or say 'Call John Smith'">
+                                    <button class="search-btn" onclick="searchContacts()">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div class="contact-suggestions" id="contact-suggestions"></div>
+                            </div>
+
+                            <!-- Main Dialing Interface -->
+                            <div class="dialer-interface">
+                                <div class="phone-input-group">
+                                    <label>Phone Number:</label>
+                                    <input type="tel" id="phone-input" placeholder="+1 (555) 123-4567">
+                                    <button class="dial-btn" onclick="startCall()">Call</button>
+                                </div>
+                                
+                                <div class="call-controls">
+                                    <button class="call-btn answer-btn" onclick="answerCall()">
+                                        <i class="fas fa-phone"></i>
+                                    </button>
+                                    <button class="call-btn hangup-btn" onclick="endCall()">
+                                        <i class="fas fa-phone-slash"></i>
+                                    </button>
+                                    <button class="call-btn mute-btn" onclick="toggleMute()">
+                                        <i class="fas fa-microphone-slash"></i>
+                                    </button>
+                                    <button class="call-btn record-btn" onclick="toggleRecording()">
+                                        <i class="fas fa-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- AI Features Panel -->
+                            <div class="ai-features-panel">
+                                <div class="feature-toggles">
+                                    <div class="toggle-item">
+                                        <label>AI Script Assistant</label>
+                                        <div class="tesla-toggle" id="script-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-item">
+                                        <label>Sentiment Analysis</label>
+                                        <div class="tesla-toggle" id="sentiment-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-item">
+                                        <label>Call Transcription</label>
+                                        <div class="tesla-toggle" id="transcription-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-item">
+                                        <label>Auto Follow-up</label>
+                                        <div class="tesla-toggle" id="followup-toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Live Analytics -->
+                            <div class="live-analytics">
+                                <div class="analytics-header">
+                                    <h4>Live Call Analytics</h4>
+                                    <div class="call-status" id="call-status">Ready</div>
+                                </div>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="call-duration">00:00</div>
+                                        <div class="metric-label">Duration</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="sentiment-score">Neutral</div>
+                                        <div class="metric-label">Sentiment</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="lead-score">85%</div>
+                                        <div class="metric-label">Lead Score</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="call-quality">Excellent</div>
+                                        <div class="metric-label">Quality</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AI Script Suggestions -->
+                            <div class="ai-script-panel" id="script-panel">
+                                <div class="script-header">
+                                    <h4>AI Script Assistant</h4>
+                                    <button class="refresh-script-btn" onclick="refreshScript()">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </div>
+                                <div class="script-content" id="script-content">
+                                    <div class="script-suggestion">
+                                        <strong>Opening:</strong> "Hi, this is [Your Name] from EnergyPlus. I'm calling about your recent inquiry regarding solar energy solutions..."
+                                    </div>
+                                    <div class="script-suggestion">
+                                        <strong>Objection Handler:</strong> "I understand your concern about cost. Let me show you how our financing options can actually save you money..."
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Call History with Advanced Features -->
+                            <div class="call-history">
+                                <div class="history-header">
+                                    <h4>Call History & Analytics</h4>
+                                    <div class="history-controls">
+                                        <button class="export-btn" onclick="exportHistory()">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="clear-btn" onclick="clearHistory()">Clear</button>
+                                    </div>
+                                </div>
+                                <div class="call-list" id="call-list">
+                                    <div class="call-item">
+                                        <div class="call-info">
+                                            <div class="contact-name">John Smith</div>
+                                            <div class="contact-number">+1 (555) 123-4567</div>
+                                            <div class="call-time">2 min ago</div>
+                                        </div>
+                                        <div class="call-analytics">
+                                            <div class="call-duration">3:45</div>
+                                            <div class="call-outcome success">Converted</div>
+                                            <div class="lead-score">92%</div>
+                                        </div>
+                                        <div class="call-actions">
+                                            <button class="action-btn" onclick="redialCall('+15551234567', 'John Smith')">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                            <button class="action-btn" onclick="viewCallDetails('call-1')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="call-item">
+                                        <div class="call-info">
+                                            <div class="contact-name">Sarah Johnson</div>
+                                            <div class="contact-number">+1 (555) 987-6543</div>
+                                            <div class="call-time">5 min ago</div>
+                                        </div>
+                                        <div class="call-analytics">
+                                            <div class="call-duration">1:23</div>
+                                            <div class="call-outcome pending">Follow-up</div>
+                                            <div class="lead-score">67%</div>
+                                        </div>
+                                        <div class="call-actions">
+                                            <button class="action-btn" onclick="redialCall('+15559876543', 'Sarah Johnson')">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                            <button class="action-btn" onclick="viewCallDetails('call-2')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Chatbot Tab -->
+                    <div class="ai-tab-content" id="ai-chatbot-tab">
+                        <div class="chatbot-section">
+                            <div class="chatbot-header">
+                                <h3><i class="fas fa-comments"></i> AI Chatbot</h3>
+                                <div class="chatbot-status">
+                                    <span class="status-dot active"></span>
+                                    <span>Online</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chatbot-interface">
+                                <div class="chat-container">
+                                    <div class="chat-messages" id="chat-messages">
+                                        <div class="message bot-message">
+                                            <div class="message-avatar">
+                                                <i class="fas fa-robot"></i>
+                                            </div>
+                                            <div class="message-content">
+                                                Hello! I'm your AI assistant. How can I help you with your energy needs today?
+                                            </div>
+                                            <div class="message-time">10:30 AM</div>
+                                        </div>
+                                        <div class="message user-message">
+                                            <div class="message-content">
+                                                I'm interested in solar panels for my home
+                                            </div>
+                                            <div class="message-time">10:32 AM</div>
+                                        </div>
+                                        <div class="message bot-message">
+                                            <div class="message-avatar">
+                                                <i class="fas fa-robot"></i>
+                                            </div>
+                                            <div class="message-content">
+                                                Great! I can help you with solar panel information. What's your approximate roof size and energy consumption?
+                                            </div>
+                                            <div class="message-time">10:32 AM</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="chat-input-section">
+                                        <div class="quick-responses">
+                                            <button class="quick-response" onclick="sendQuickResponse('Tell me about solar panels')">
+                                                <i class="fas fa-solar-panel"></i>
+                                                Solar Panels
+                                            </button>
+                                            <button class="quick-response" onclick="sendQuickResponse('What are your energy rates?')">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                Energy Rates
+                                            </button>
+                                            <button class="quick-response" onclick="sendQuickResponse('Schedule consultation')">
+                                                <i class="fas fa-calendar"></i>
+                                                Consultation
+                                            </button>
+                                            <button class="quick-response" onclick="sendQuickResponse('Wind energy options')">
+                                                <i class="fas fa-wind"></i>
+                                                Wind Energy
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="message-input-group">
+                                            <input type="text" id="message-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                                            <button class="btn-send" onclick="sendMessage()">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="chat-controls">
+                                            <button class="control-btn" onclick="clearChat()">
+                                                <i class="fas fa-trash"></i>
+                                                Clear Chat
+                                            </button>
+                                            <button class="control-btn" onclick="exportChat()">
+                                                <i class="fas fa-download"></i>
+                                                Export
+                                            </button>
+                                            <button class="control-btn" onclick="toggleTyping()">
+                                                <i class="fas fa-keyboard"></i>
+                                                Typing: <span id="typing-status">ON</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chatbot-settings">
+                                    <h4>Bot Settings</h4>
+                                    <div class="settings-group">
+                                        <label class="setting-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Auto-respond to common questions
+                                        </label>
+                                        <label class="setting-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Collect contact information
+                                        </label>
+                                        <label class="setting-item">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            Transfer to human agent
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing Tracker Page (Tesla-Inspired) -->
+                <div class="page" id="marketing-tracker">
+                    <div class="tesla-marketing-layout">
+                        <!-- Top Section: Large Metric + Chart -->
+                        <div class="tesla-marketing-top">
+                            <!-- Left: Large Key Metric -->
+                            <div class="tesla-key-metric">
+                                <div class="metric-number">1,247</div>
+                                <div class="metric-label">Leads Generated</div>
+                                <div class="metric-subtitle">This Quarter</div>
+                                <div class="metric-change positive">+18.5%</div>
+                            </div>
+                            
+                            <!-- Right: Tesla-Style Chart -->
+                            <div class="tesla-chart-container">
+                                <div class="chart-header">
+                                    <h3>Campaign Performance</h3>
+                                    <div class="chart-controls">
+                                        <button class="tesla-btn-small active" data-period="7d">7D</button>
+                                        <button class="tesla-btn-small" data-period="30d">30D</button>
+                                        <button class="tesla-btn-small" data-period="90d">90D</button>
+                                    </div>
+                                </div>
+                                <div class="tesla-chart" id="marketing-chart">
+                                    <svg viewBox="0 0 400 200" class="chart-svg">
+                                        <!-- Chart background -->
+                                        <defs>
+                                            <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.3" />
+                                                <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.05" />
+                                            </linearGradient>
+                                        </defs>
+                                        
+                                        <!-- Grid lines -->
+                                        <line x1="50" y1="20" x2="50" y2="180" stroke="#333" stroke-width="1"/>
+                                        <line x1="50" y1="180" x2="350" y2="180" stroke="#333" stroke-width="1"/>
+                                        <line x1="50" y1="100" x2="350" y2="100" stroke="#333" stroke-width="0.5" opacity="0.5"/>
+                                        
+                                        <!-- Chart area -->
+                                        <path d="M 60 160 L 100 140 L 140 120 L 180 100 L 220 80 L 260 60 L 300 40 L 340 20" 
+                                              fill="url(#chartGradient)" 
+                                              stroke="#00ff88" 
+                                              stroke-width="3" 
+                                              class="chart-line"/>
+                                        
+                                        <!-- Data points -->
+                                        <circle cx="60" cy="160" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="100" cy="140" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="140" cy="120" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="180" cy="100" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="220" cy="80" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="260" cy="60" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="300" cy="40" r="4" fill="#00ff88" class="data-point"/>
+                                        <circle cx="340" cy="20" r="4" fill="#00ff88" class="data-point"/>
+                                        
+                                        <!-- Labels -->
+                                        <text x="50" y="195" fill="#666" text-anchor="middle" font-size="12">Jan</text>
+                                        <text x="100" y="195" fill="#666" text-anchor="middle" font-size="12">Feb</text>
+                                        <text x="140" y="195" fill="#666" text-anchor="middle" font-size="12">Mar</text>
+                                        <text x="180" y="195" fill="#666" text-anchor="middle" font-size="12">Apr</text>
+                                        <text x="220" y="195" fill="#666" text-anchor="middle" font-size="12">May</text>
+                                        <text x="260" y="195" fill="#666" text-anchor="middle" font-size="12">Jun</text>
+                                        <text x="300" y="195" fill="#666" text-anchor="middle" font-size="12">Jul</text>
+                                        <text x="340" y="195" fill="#666" text-anchor="middle" font-size="12">Aug</text>
+                                        
+                                        <text x="40" y="25" fill="#666" text-anchor="end" font-size="12">1M</text>
+                                        <text x="40" y="105" fill="#666" text-anchor="end" font-size="12">500K</text>
+                                        <text x="40" y="185" fill="#666" text-anchor="end" font-size="12">0</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Section: Organized Metrics -->
+                        <div class="tesla-metrics-grid">
+                            <!-- Performance Row -->
+                            <div class="metric-row">
+                                <div class="tesla-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <div class="metric-value">12.3%</div>
+                                        <div class="metric-label">Conversion Rate</div>
+                                        <div class="metric-change positive">+2.1%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <div class="metric-value">$47</div>
+                                        <div class="metric-label">Cost per Lead</div>
+                                        <div class="metric-change negative">-8.2%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <div class="metric-value">$58.6K</div>
+                                        <div class="metric-label">Total Ad Spend</div>
+                                        <div class="metric-change positive">+12.3%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Impact Row -->
+                            <div class="metric-row">
+                                <div class="tesla-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-trending-up"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <div class="metric-value">340%</div>
+                                        <div class="metric-label">ROI Generated</div>
+                                        <div class="metric-change positive">+22.7%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-mouse-pointer"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <div class="metric-value">4.2%</div>
+                                        <div class="metric-label">Click-Through Rate</div>
+                                        <div class="metric-change positive">+0.8%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <div class="metric-value">2.3M</div>
+                                        <div class="metric-label">kWh Impacted</div>
+                                        <div class="metric-change positive">+31.4%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Content Generation Page (Tesla Powerwall Aesthetic) -->
+                <div class="page" id="ai-content-generation">
+                    <div class="tesla-powerwall-layout">
+                        <!-- Tesla-Style Header -->
+                        <div class="tesla-header">
+                            <h1 class="tesla-main-title">AI Content Generation</h1>
+                            <p class="tesla-subtitle">Advanced AI-powered content creation for energy businesses</p>
+                        </div>
+                        
+                        <!-- Tesla-Style Tab Navigation -->
+                        <div class="tesla-tab-navigation">
+                            <div class="tab-item active" data-tab="copywriting">
+                                <span class="tab-text">AI Copywriting</span>
+                                <div class="tab-indicator"></div>
+                            </div>
+                            <div class="tab-item" data-tab="image">
+                                <span class="tab-text">Image Generation</span>
+                                <div class="tab-indicator"></div>
+                            </div>
+                            <div class="tab-item" data-tab="video">
+                                <span class="tab-text">Video Generation</span>
+                                <div class="tab-indicator"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content Area -->
+                        <div class="tesla-content-area">
+                            <!-- Copywriting Tab -->
+                            <div class="content-tab active" id="copywriting-content">
+                                <div class="tesla-specs-section">
+                                    <h2 class="specs-title">AI Copywriting</h2>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <div class="spec-label">AI Provider</div>
+                                            <div class="spec-value">OpenAI GPT-4</div>
+                                            <div class="spec-detail">Advanced language model for marketing copy</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Content Types</div>
+                                            <div class="spec-value">Blog Posts, Social Media, Email Campaigns</div>
+                                            <div class="spec-detail">Multi-format content generation</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Energy Focus</div>
+                                            <div class="spec-value">Solar, Wind, Efficiency Marketing</div>
+                                            <div class="spec-detail">Industry-specific templates and prompts</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Quality Score</div>
+                                            <div class="spec-value">97.5%</div>
+                                            <div class="spec-detail">Professional-grade content output</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-input-section">
+                                    <div class="input-group">
+                                        <label class="input-label">Content Prompt</label>
+                                        <textarea class="tesla-textarea" placeholder="Describe the content you want to create..."></textarea>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="input-label">Content Type</label>
+                                        <select class="tesla-select">
+                                            <option>Blog Post</option>
+                                            <option>Social Media</option>
+                                            <option>Email Campaign</option>
+                                            <option>Product Description</option>
+                                        </select>
+                                    </div>
+                                    <button class="tesla-generate-btn">
+                                        <span class="btn-text">Generate Content</span>
+                                        <div class="btn-indicator"></div>
+                                    </button>
+                                </div>
+                                
+                                <div class="tesla-output-section">
+                                    <div class="output-placeholder">
+                                        <div class="placeholder-icon">📝</div>
+                                        <p class="placeholder-text">Your AI-generated content will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Image Tab -->
+                            <div class="content-tab" id="image-content">
+                                <div class="tesla-specs-section">
+                                    <h2 class="specs-title">Image Generation</h2>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <div class="spec-label">AI Provider</div>
+                                            <div class="spec-value">DALL-E 3</div>
+                                            <div class="spec-detail">OpenAI's advanced image generation model</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Image Quality</div>
+                                            <div class="spec-value">1024x1024 HD</div>
+                                            <div class="spec-detail">High-resolution output</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Energy Themes</div>
+                                            <div class="spec-value">Solar, Wind, Green Technology</div>
+                                            <div class="spec-detail">Industry-specific visual content</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Generation Time</div>
+                                            <div class="spec-value">15-30 seconds</div>
+                                            <div class="spec-detail">Fast, efficient processing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-input-section">
+                                    <div class="input-group">
+                                        <label class="input-label">Image Prompt</label>
+                                        <textarea class="tesla-textarea" placeholder="Describe the image you want to create..."></textarea>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="input-label">Image Size</label>
+                                        <select class="tesla-select">
+                                            <option>1024x1024 (Square)</option>
+                                            <option>1024x1792 (Portrait)</option>
+                                            <option>1792x1024 (Landscape)</option>
+                                        </select>
+                                    </div>
+                                    <button class="tesla-generate-btn">
+                                        <span class="btn-text">Generate Image</span>
+                                        <div class="btn-indicator"></div>
+                                    </button>
+                                </div>
+                                
+                                <div class="tesla-output-section">
+                                    <div class="output-placeholder">
+                                        <div class="placeholder-icon">🖼️</div>
+                                        <p class="placeholder-text">Your AI-generated image will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Video Tab -->
+                            <div class="content-tab" id="video-content">
+                                <div class="tesla-specs-section">
+                                    <h2 class="specs-title">Video Generation</h2>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <div class="spec-label">AI Provider</div>
+                                            <div class="spec-value">Sora</div>
+                                            <div class="spec-detail">OpenAI's video generation model</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Video Quality</div>
+                                            <div class="spec-value">1080p HD</div>
+                                            <div class="spec-detail">High-definition output</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Duration</div>
+                                            <div class="spec-value">Up to 60 seconds</div>
+                                            <div class="spec-detail">Flexible video length</div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-label">Energy Content</div>
+                                            <div class="spec-value">Solar, Wind, Efficiency</div>
+                                            <div class="spec-detail">Industry-specific video themes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-input-section">
+                                    <div class="input-group">
+                                        <label class="input-label">Video Prompt</label>
+                                        <textarea class="tesla-textarea" placeholder="Describe the video you want to create..."></textarea>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="input-label">Video Format</label>
+                                        <select class="tesla-select">
+                                            <option>16:9 (Landscape)</option>
+                                            <option>9:16 (Portrait)</option>
+                                            <option>1:1 (Square)</option>
+                                        </select>
+                                    </div>
+                                    <button class="tesla-generate-btn">
+                                        <span class="btn-text">Generate Video</span>
+                                        <div class="btn-indicator"></div>
+                                    </button>
+                                </div>
+                                
+                                <div class="tesla-output-section">
+                                    <div class="output-placeholder">
+                                        <div class="placeholder-icon">🎬</div>
+                                        <p class="placeholder-text">Your AI-generated video will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+
+                <!-- Contact Management Page -->
+                <div class="page" id="contact">
+                    <div class="tesla-contact-header">
+                        <h1 class="tesla-title">Contact Management</h1>
+                        <p class="tesla-subtitle">Advanced client and lead management with AI-powered insights</p>
+                    </div>
+                    
+                    <!-- Contact Overview -->
+                    <div class="tesla-contact-overview">
+                        <div class="tesla-metric-card neon-card">
+                            <div class="metric-icon neon-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value neon-text">1,247</div>
+                                <div class="metric-label">Total Contacts</div>
+                                <div class="metric-change positive">+12.5%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tesla-metric-card neon-card">
+                            <div class="metric-icon neon-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value neon-text">89</div>
+                                <div class="metric-label">Active Leads</div>
+                                <div class="metric-change positive">+8.3%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tesla-metric-card neon-card">
+                            <div class="metric-icon neon-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value neon-text">156</div>
+                                <div class="metric-label">Qualified Clients</div>
+                                <div class="metric-change positive">+15.7%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tesla-metric-card neon-card">
+                            <div class="metric-icon neon-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value neon-text">23.4%</div>
+                                <div class="metric-label">Conversion Rate</div>
+                                <div class="metric-change positive">+2.1%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Management Tabs -->
+                    <div class="tesla-contact-tabs">
+                        <button class="tesla-tab-btn active" data-contact-tab="leads">
+                            <i class="fas fa-search"></i>
+                            <span>Leads</span>
+                            <div class="tab-indicator"></div>
+                        </button>
+                        <button class="tesla-tab-btn" data-contact-tab="clients">
+                            <i class="fas fa-users"></i>
+                            <span>Clients</span>
+                            <div class="tab-indicator"></div>
+                        </button>
+                        <button class="tesla-tab-btn" data-contact-tab="analytics">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                            <div class="tab-indicator"></div>
+                        </button>
+                    </div>
+                    
+                    <!-- Contact Content -->
+                    <div class="tesla-contact-content">
+                        <!-- Leads Tab -->
+                        <div class="tesla-contact-tab active" id="leads-tab">
+                            <div class="tesla-leads-section">
+                                <!-- Lead Pipeline -->
+                                <div class="tesla-pipeline">
+                                    <div class="pipeline-header">
+                                        <h3><i class="fas fa-sitemap"></i> Lead Pipeline</h3>
+                                        <div class="pipeline-controls">
+                                            <button class="tesla-btn-small neon-btn">
+                                                <i class="fas fa-plus"></i>
+                                                Add Lead
+                                            </button>
+                                            <button class="tesla-btn-small neon-btn">
+                                                <i class="fas fa-filter"></i>
+                                                Filter
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="pipeline-stages">
+                                        <div class="pipeline-stage neon-stage">
+                                            <div class="stage-header">
+                                                <h4>New Leads</h4>
+                                                <span class="stage-count neon-count">24</span>
+                                            </div>
+                                            <div class="stage-leads">
+                                                <div class="lead-card neon-card">
+                                                    <div class="lead-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <div class="lead-info">
+                                                        <h5>John Smith</h5>
+                                                        <p>Solar Installation</p>
+                                                        <div class="lead-score">
+                                                            <span class="score-value">85</span>
+                                                            <div class="score-bar">
+                                                                <div class="score-fill" style="width: 85%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lead-actions">
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-phone"></i>
+                                                        </button>
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="lead-card neon-card">
+                                                    <div class="lead-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <div class="lead-info">
+                                                        <h5>Sarah Johnson</h5>
+                                                        <p>Wind Energy</p>
+                                                        <div class="lead-score">
+                                                            <span class="score-value">92</span>
+                                                            <div class="score-bar">
+                                                                <div class="score-fill" style="width: 92%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lead-actions">
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-phone"></i>
+                                                        </button>
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="pipeline-stage neon-stage">
+                                            <div class="stage-header">
+                                                <h4>Qualified</h4>
+                                                <span class="stage-count neon-count">18</span>
+                                            </div>
+                                            <div class="stage-leads">
+                                                <div class="lead-card neon-card">
+                                                    <div class="lead-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <div class="lead-info">
+                                                        <h5>Mike Wilson</h5>
+                                                        <p>Hybrid System</p>
+                                                        <div class="lead-score">
+                                                            <span class="score-value">78</span>
+                                                            <div class="score-bar">
+                                                                <div class="score-fill" style="width: 78%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lead-actions">
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-phone"></i>
+                                                        </button>
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="pipeline-stage neon-stage">
+                                            <div class="stage-header">
+                                                <h4>Proposal</h4>
+                                                <span class="stage-count neon-count">12</span>
+                                            </div>
+                                            <div class="stage-leads">
+                                                <div class="lead-card neon-card">
+                                                    <div class="lead-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <div class="lead-info">
+                                                        <h5>Lisa Brown</h5>
+                                                        <p>Commercial Solar</p>
+                                                        <div class="lead-score">
+                                                            <span class="score-value">95</span>
+                                                            <div class="score-bar">
+                                                                <div class="score-fill" style="width: 95%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lead-actions">
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-phone"></i>
+                                                        </button>
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="pipeline-stage neon-stage">
+                                            <div class="stage-header">
+                                                <h4>Closed</h4>
+                                                <span class="stage-count neon-count">8</span>
+                                            </div>
+                                            <div class="stage-leads">
+                                                <div class="lead-card neon-card">
+                                                    <div class="lead-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <div class="lead-info">
+                                                        <h5>David Miller</h5>
+                                                        <p>Residential Solar</p>
+                                                        <div class="lead-score">
+                                                            <span class="score-value">100</span>
+                                                            <div class="score-bar">
+                                                                <div class="score-fill" style="width: 100%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lead-actions">
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-check"></i>
+                                                        </button>
+                                                        <button class="action-btn neon-btn">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Clients Tab -->
+                        <div class="tesla-contact-tab" id="clients-tab">
+                            <div class="tesla-clients-section">
+                                <div class="clients-header">
+                                    <h3><i class="fas fa-users"></i> Client Management</h3>
+                                    <div class="clients-controls">
+                                        <div class="search-bar tesla-search">
+                                            <input type="text" placeholder="Search clients...">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                        <button class="tesla-btn-small neon-btn">
+                                            <i class="fas fa-plus"></i>
+                                            Add Client
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="clients-grid">
+                                    <div class="client-card neon-card">
+                                        <div class="client-header">
+                                            <div class="client-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="client-info">
+                                                <h5>Robert Davis</h5>
+                                                <p>Austin, TX</p>
+                                                <span class="client-status active">Active</span>
+                                            </div>
+                                            <div class="client-menu">
+                                                <button class="menu-btn">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="client-details">
+                                            <div class="detail-item">
+                                                <span class="detail-label">System Type:</span>
+                                                <span class="detail-value">Solar 5kW</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Installation:</span>
+                                                <span class="detail-value">2023-06-15</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Monthly Savings:</span>
+                                                <span class="detail-value neon-text">$150</span>
+                                            </div>
+                                        </div>
+                                        <div class="client-actions">
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-phone"></i>
+                                            </button>
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-envelope"></i>
+                                            </button>
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-chart-line"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="client-card neon-card">
+                                        <div class="client-header">
+                                            <div class="client-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="client-info">
+                                                <h5>Lisa Brown</h5>
+                                                <p>Phoenix, AZ</p>
+                                                <span class="client-status qualified">Qualified</span>
+                                            </div>
+                                            <div class="client-menu">
+                                                <button class="menu-btn">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="client-details">
+                                            <div class="detail-item">
+                                                <span class="detail-label">System Type:</span>
+                                                <span class="detail-value">Solar 8kW</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Installation:</span>
+                                                <span class="detail-value">2023-08-20</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Monthly Savings:</span>
+                                                <span class="detail-value neon-text">$240</span>
+                                            </div>
+                                        </div>
+                                        <div class="client-actions">
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-phone"></i>
+                                            </button>
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-envelope"></i>
+                                            </button>
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-chart-line"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="client-card neon-card">
+                                        <div class="client-header">
+                                            <div class="client-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="client-info">
+                                                <h5>David Miller</h5>
+                                                <p>Denver, CO</p>
+                                                <span class="client-status active">Active</span>
+                                            </div>
+                                            <div class="client-menu">
+                                                <button class="menu-btn">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="client-details">
+                                            <div class="detail-item">
+                                                <span class="detail-label">System Type:</span>
+                                                <span class="detail-value">Wind 3kW</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Installation:</span>
+                                                <span class="detail-value">2023-09-10</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Monthly Savings:</span>
+                                                <span class="detail-value neon-text">$120</span>
+                                            </div>
+                                        </div>
+                                        <div class="client-actions">
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-phone"></i>
+                                            </button>
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-envelope"></i>
+                                            </button>
+                                            <button class="action-btn neon-btn">
+                                                <i class="fas fa-chart-line"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analytics Tab -->
+                        <div class="tesla-contact-tab" id="analytics-tab">
+                            <div class="tesla-analytics-section">
+                                <div class="analytics-header">
+                                    <h3><i class="fas fa-chart-bar"></i> Contact Analytics</h3>
+                                    <div class="analytics-controls">
+                                        <select class="tesla-select">
+                                            <option>Last 30 Days</option>
+                                            <option>Last 90 Days</option>
+                                            <option>Last Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="analytics-grid">
+                                    <div class="analytics-card neon-card">
+                                        <div class="card-header">
+                                            <h4>Lead Conversion</h4>
+                                            <i class="fas fa-chart-pie"></i>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="conversion-chart">
+                                                <div class="chart-segment" data-value="24" data-label="New Leads">
+                                                    <div class="segment-fill"></div>
+                                                </div>
+                                                <div class="chart-segment" data-value="18" data-label="Qualified">
+                                                    <div class="segment-fill"></div>
+                                                </div>
+                                                <div class="chart-segment" data-value="12" data-label="Proposal">
+                                                    <div class="segment-fill"></div>
+                                                </div>
+                                                <div class="chart-segment" data-value="8" data-label="Closed">
+                                                    <div class="segment-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="analytics-card neon-card">
+                                        <div class="card-header">
+                                            <h4>Client Satisfaction</h4>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="satisfaction-metrics">
+                                            <div class="metric-item">
+                                                <span class="metric-label">Overall Rating</span>
+                                                <div class="rating-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="rating-value">4.8/5</span>
+                                            </div>
+                                            <div class="metric-item">
+                                                <span class="metric-label">Response Time</span>
+                                                <span class="metric-value neon-text">2.3 hours</span>
+                                            </div>
+                                            <div class="metric-item">
+                                                <span class="metric-label">Issue Resolution</span>
+                                                <span class="metric-value neon-text">94%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="analytics-card neon-card">
+                                        <div class="card-header">
+                                            <h4>Revenue Impact</h4>
+                                            <i class="fas fa-dollar-sign"></i>
+                                        </div>
+                                        <div class="revenue-metrics">
+                                            <div class="revenue-item">
+                                                <span class="revenue-label">Total Revenue</span>
+                                                <span class="revenue-value neon-text">$2.4M</span>
+                                            </div>
+                                            <div class="revenue-item">
+                                                <span class="revenue-label">Avg. Deal Size</span>
+                                                <span class="revenue-value neon-text">$15.6K</span>
+                                            </div>
+                                            <div class="revenue-item">
+                                                <span class="revenue-label">Growth Rate</span>
+                                                <span class="revenue-value positive">+23.5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installation Page (Tesla-Inspired) -->
+                <div class="page" id="installation">
+                    <div class="tesla-installation-layout">
+                        <!-- Top Section: Map (Left) + Installation Board (Right) -->
+                        <div class="tesla-top-section">
+                            <!-- Left Side: Large Interactive Map -->
+                            <div class="tesla-map-section">
+                                <div class="tesla-map-header">
+                                    <h2>Installation Locations</h2>
+                                    <div class="tesla-live-indicator">
+                                        <div class="status-dot active"></div>
+                                        <span>Live Updates</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tesla-interactive-map" id="tesla-installation-map">
+                                    <div class="tesla-map-grid">
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                        <div class="tesla-map-tile"></div>
+                                    </div>
+                                    
+                                    <!-- Tesla-Style Installation Markers -->
+                                    <div class="tesla-installation-markers">
+                                        <div class="tesla-marker completed" style="top: 20%; left: 30%;" data-installation="1">
+                                            <div class="tesla-marker-glow"></div>
+                                            <div class="tesla-marker-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div class="tesla-marker-tooltip">
+                                                <div class="tooltip-header">Tesla Energy Solutions</div>
+                                                <div class="tooltip-details">
+                                                    <span class="company">Tesla Energy Solutions</span>
+                                                    <span class="location">Lagos, Nigeria</span>
+                                                    <span class="status">Completed</span>
+                                                    <span class="time">Dec 15, 2024 - 14:30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tesla-marker in-progress" style="top: 45%; left: 65%;" data-installation="2">
+                                            <div class="tesla-marker-glow"></div>
+                                            <div class="tesla-marker-icon">
+                                                <i class="fas fa-cog fa-spin"></i>
+                                            </div>
+                                            <div class="tesla-marker-tooltip">
+                                                <div class="tooltip-header">Tesla Wind Systems</div>
+                                                <div class="tooltip-details">
+                                                    <span class="company">Tesla Wind Systems</span>
+                                                    <span class="location">Abuja, Nigeria</span>
+                                                    <span class="status">In Progress</span>
+                                                    <span class="time">Dec 20, 2024 - 09:15</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tesla-marker pending" style="top: 70%; left: 25%;" data-installation="3">
+                                            <div class="tesla-marker-glow"></div>
+                                            <div class="tesla-marker-icon">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="tesla-marker-tooltip">
+                                                <div class="tooltip-header">Tesla Solar Array</div>
+                                                <div class="tooltip-details">
+                                                    <span class="company">Tesla Solar Array</span>
+                                                    <span class="location">Port Harcourt, Nigeria</span>
+                                                    <span class="status">Pending</span>
+                                                    <span class="time">Dec 25, 2024 - 08:00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tesla-marker completed" style="top: 60%; left: 80%;" data-installation="4">
+                                            <div class="tesla-marker-glow"></div>
+                                            <div class="tesla-marker-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div class="tesla-marker-tooltip">
+                                                <div class="tooltip-header">Tesla Hybrid Power</div>
+                                                <div class="tooltip-details">
+                                                    <span class="company">Tesla Hybrid Power</span>
+                                                    <span class="location">Kano, Nigeria</span>
+                                                    <span class="status">Completed</span>
+                                                    <span class="time">Dec 10, 2024 - 16:45</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side: Installation Board -->
+                            <div class="tesla-installation-board">
+                                <div class="tesla-board-header">
+                                    <h2>Current Installations</h2>
+                                    <button class="tesla-add-btn" onclick="addInstallation()">
+                                        <i class="fas fa-plus"></i>
+                                        Add Installation
+                                    </button>
+                                </div>
+                                
+                                <div class="tesla-installation-list">
+                                    <div class="tesla-installation-item completed">
+                                        <div class="installation-info">
+                                            <div class="company-name">Tesla Energy Solutions</div>
+                                            <div class="installation-location">Lagos, Nigeria</div>
+                                            <div class="installation-date">Dec 15, 2024 - 14:30</div>
+                                        </div>
+                                        <div class="installation-progress">
+                                            <div class="progress-percentage">100%</div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tesla-installation-item in-progress">
+                                        <div class="installation-info">
+                                            <div class="company-name">Tesla Wind Systems</div>
+                                            <div class="installation-location">Abuja, Nigeria</div>
+                                            <div class="installation-date">Dec 20, 2024 - 09:15</div>
+                                        </div>
+                                        <div class="installation-progress">
+                                            <div class="progress-percentage">75%</div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tesla-installation-item pending">
+                                        <div class="installation-info">
+                                            <div class="company-name">Tesla Solar Array</div>
+                                            <div class="installation-location">Port Harcourt, Nigeria</div>
+                                            <div class="installation-date">Dec 25, 2024 - 08:00</div>
+                                        </div>
+                                        <div class="installation-progress">
+                                            <div class="progress-percentage">0%</div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tesla-installation-item completed">
+                                        <div class="installation-info">
+                                            <div class="company-name">Tesla Hybrid Power</div>
+                                            <div class="installation-location">Kano, Nigeria</div>
+                                            <div class="installation-date">Dec 10, 2024 - 16:45</div>
+                                        </div>
+                                        <div class="installation-progress">
+                                            <div class="progress-percentage">100%</div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Marketing Tracker Page -->
+                <div class="page" id="marketing-tracker">
+                    <div class="tesla-marketing-header">
+                        <h1 class="tesla-title">Marketing Tracker</h1>
+                        <p class="tesla-subtitle">Real-time performance analytics for energy marketing campaigns</p>
+                        <div class="tesla-live-indicator">
+                            <div class="status-dot active"></div>
+                            <span>Live Data</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Campaign Selector Section -->
+                    <div class="tesla-campaign-selector">
+                        <div class="campaign-dropdown-section">
+                            <label class="campaign-label">Select Campaign:</label>
+                            <select class="tesla-campaign-dropdown" id="campaign-selector">
+                                <option value="solar-summer-2024">Solar Summer 2024</option>
+                                <option value="wind-energy-q3">Wind Energy Q3 Campaign</option>
+                                <option value="green-tech-launch">Green Tech Launch</option>
+                                <option value="sustainability-drive">Sustainability Drive</option>
+                                <option value="winter-efficiency">Winter Efficiency Campaign</option>
+                            </select>
+                        </div>
+                        <div class="campaign-actions">
+                            <button class="tesla-btn tesla-btn-primary" onclick="addNewCampaign()">
+                                <i class="fas fa-plus"></i>
+                                Add Campaign
+                            </button>
+                            <a href="#" class="tesla-link" onclick="manageCampaigns()">Manage Campaigns</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Graph Section -->
+                    <div class="tesla-graph-section">
+                        <div class="tesla-graph-header">
+                            <h3>Campaign Performance</h3>
+                            <div class="graph-controls">
+                                <button class="tesla-btn active" data-period="7d">7D</button>
+                                <button class="tesla-btn" data-period="30d">30D</button>
+                                <button class="tesla-btn" data-period="90d">90D</button>
+                                <div class="social-toggle">
+                                    <label class="tesla-toggle-label">
+                                        <input type="checkbox" id="social-metrics-toggle" onchange="toggleSocialMetrics()">
+                                        <span class="toggle-slider"></span>
+                                        <span class="toggle-text">Show Social Media Metrics</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tesla-graph-container">
+                            <canvas id="tesla-performance-graph"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- KPI Metrics Section -->
+                    <div class="tesla-kpi-section">
+                        <div class="kpi-header">
+                            <h3>Key Metrics</h3>
+                            <div class="kpi-status">
+                                <span class="status-dot active"></span>
+                                <span>Updated 2m ago</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Performance KPIs Group -->
+                        <div class="kpi-group">
+                            <h4 class="group-title">Performance KPIs</h4>
+                            <div class="kpi-row">
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">1,247</div>
+                                        <div class="kpi-label">Leads Generated</div>
+                                        <div class="kpi-change positive">+18.9%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">4.7%</div>
+                                        <div class="kpi-label">Conversion Rate</div>
+                                        <div class="kpi-change positive">+1.2%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">$156</div>
+                                        <div class="kpi-label">Cost Per Lead</div>
+                                        <div class="kpi-change positive">-12.4%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Marketing Efficiency Group -->
+                        <div class="kpi-group">
+                            <h4 class="group-title">Marketing Efficiency</h4>
+                            <div class="kpi-row">
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">$12.4K</div>
+                                        <div class="kpi-label">Total Ad Spend</div>
+                                        <div class="kpi-change negative">-2.1%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">$45.2K</div>
+                                        <div class="kpi-label">ROI Generated</div>
+                                        <div class="kpi-change positive">+18.3%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-mouse-pointer"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">3.2%</div>
+                                        <div class="kpi-label">Click-Through Rate</div>
+                                        <div class="kpi-change positive">+0.8%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Energy Impact Group -->
+                        <div class="kpi-group">
+                            <h4 class="group-title">Energy Impact</h4>
+                            <div class="kpi-row">
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-solar-panel"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">234</div>
+                                        <div class="kpi-label">Solar Inquiries</div>
+                                        <div class="kpi-change positive">+12.7%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">89</div>
+                                        <div class="kpi-label">Installation Appointments</div>
+                                        <div class="kpi-change positive">+8.3%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card energy-metric">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">2.3M</div>
+                                        <div class="kpi-label">kWh Impacted</div>
+                                        <div class="kpi-change positive">+31.4%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media Metrics Group (Hidden by default) -->
+                        <div class="kpi-group social-metrics-group" id="social-metrics-group" style="display: none;">
+                            <h4 class="group-title">Social Media Metrics</h4>
+                            <div class="kpi-row">
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">2.4M</div>
+                                        <div class="kpi-label">Impressions</div>
+                                        <div class="kpi-change positive">+12.5%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">156K</div>
+                                        <div class="kpi-label">Video Views</div>
+                                        <div class="kpi-change positive">+25.1%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">6.8%</div>
+                                        <div class="kpi-label">Engagement Rate</div>
+                                        <div class="kpi-change positive">+1.4%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="kpi-card">
+                                    <div class="kpi-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="kpi-content">
+                                        <div class="kpi-value">89K</div>
+                                        <div class="kpi-label">Website Traffic</div>
+                                        <div class="kpi-change positive">+15.2%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Calendar Page -->
+                <div class="page" id="content-calendar">
+                    <div class="page-header">
+                        <h2><i class="fas fa-calendar"></i> Content Calendar</h2>
+                        <p>Plan and schedule your content across all platforms</p>
+                    </div>
+                    
+                    <!-- Calendar Controls -->
+                    <div class="calendar-controls">
+                        <div class="month-navigation">
+                            <button class="nav-btn" id="prev-month">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                                </select>
+                            </div>
+                            <div class="date-range">
+                                <label>Date Range:</label>
+                                <select class="date-dropdown">
+                                    <option value="7d">Last 7 days</option>
+                                    <option value="30d" selected>Last 30 days</option>
+                                    <option value="90d">Last 90 days</option>
+                                    <option value="custom">Custom Range</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Metrics Cards -->
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h3>2.4M</h3>
+                                    <p>Total Impressions</p>
+                                    <span class="metric-change positive">+12.5%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-mouse-pointer"></i>
+                            </div>
+                                <div class="metric-content">
+                                    <h3>156K</h3>
+                                    <p>Total Clicks</p>
+                                    <span class="metric-change positive">+8.3%</span>
+                        </div>
+                    </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-heart"></i>
+                </div>
+                                <div class="metric-content">
+                                    <h3>89K</h3>
+                                    <p>Total Engagements</p>
+                                    <span class="metric-change positive">+15.2%</span>
+            </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h3>$12.4K</h3>
+                                    <p>Total Spend</p>
+                                    <span class="metric-change negative">-2.1%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- Content Calendar Page -->
+                <div class="page" id="content-calendar">
+                    <div class="page-header">
+                        <h2><i class="fas fa-calendar"></i> Content Calendar</h2>
+                        <p>Plan and schedule your content across all platforms</p>
+                    </div>
+                    
+                    <!-- Calendar Controls -->
+                    <div class="calendar-controls">
+                        <div class="month-navigation">
+                            <button class="nav-btn" id="prev-month">
+                                <i class="fas fa-chevron-left"></i>
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$45.2K</h3>
+                                        <p>Return on Investment (ROI)</p>
+                                        <span class="metric-change positive">+18.3%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$12.8K</h3>
+                                        <p>Monthly Recurring Revenue (MRR)</p>
+                                        <span class="metric-change positive">+8.7%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$156</h3>
+                                        <p>Customer Acquisition Cost (CAC)</p>
+                                        <span class="metric-change positive">-12.4%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$2,340</h3>
+                                        <p>Customer Lifetime Value (CLV)</p>
+                                        <span class="metric-change positive">+15.2%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-mouse-pointer"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$0.89</h3>
+                                        <p>Cost Per Click (CPC)</p>
+                                        <span class="metric-change positive">-5.1%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-hand-pointer"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>3.2%</h3>
+                                        <p>Click-Through Rate (CTR)</p>
+                                        <span class="metric-change positive">+0.8%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>4.7%</h3>
+                                        <p>Conversion Rate</p>
+                                        <span class="metric-change positive">+1.2%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$23.45</h3>
+                                        <p>Revenue Per Visitor (RPV)</p>
+                                        <span class="metric-change positive">+9.3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Revenue Metrics -->
+                        <div class="revenue-section">
+                            <h4>Revenue Metrics</h4>
+                            <div class="revenue-grid">
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$156.7K</h3>
+                                        <p>Total Revenue</p>
+                                        <span class="metric-change positive">+22.1%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-ad"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$24.3K</h3>
+                                        <p>Ad Spend</p>
+                                        <span class="metric-change negative">+5.2%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$132.4K</h3>
+                                        <p>Net Profit</p>
+                                        <span class="metric-change positive">+25.8%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>84.5%</h3>
+                                        <p>Profit Margin</p>
+                                        <span class="metric-change positive">+2.1%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Engagement Metrics -->
+                        <div class="engagement-section">
+                            <h4>Engagement Metrics</h4>
+                            <div class="engagement-grid">
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>24.7%</h3>
+                                        <p>Email Open Rate</p>
+                                        <span class="metric-change positive">+3.2%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>4.2%</h3>
+                                        <p>Email Click Rate</p>
+                                        <span class="metric-change positive">+0.9%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>6.8%</h3>
+                                        <p>Social Media Engagement Rate</p>
+                                        <span class="metric-change positive">+1.4%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>42.3%</h3>
+                                        <p>Website Bounce Rate</p>
+                                        <span class="metric-change positive">-2.1%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>3:24</h3>
+                                        <p>Average Session Duration</p>
+                                        <span class="metric-change positive">+0:18</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Growth Metrics -->
+                        <div class="growth-section">
+                            <h4>Growth Metrics</h4>
+                            <div class="growth-grid">
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>1,247</h3>
+                                        <p>Lead Generation</p>
+                                        <span class="metric-change positive">+18.9%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>234</h3>
+                                        <p>Qualified Leads</p>
+                                        <span class="metric-change positive">+12.7%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-funnel-dollar"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>$89.2K</h3>
+                                        <p>Sales Pipeline Value</p>
+                                        <span class="metric-change positive">+31.4%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fas fa-chart-area"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h3>2.3%</h3>
+                                        <p>Market Share Growth</p>
+                                        <span class="metric-change positive">+0.4%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
