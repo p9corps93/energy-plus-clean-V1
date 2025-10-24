@@ -3973,9 +3973,9 @@ p, span, div, label, button, input, textarea, select {
 .tesla-installation-layout {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 80px);
     background: #000000;
-    padding: 20px;
+    padding: 0;
     overflow: visible;
 }
 
@@ -3983,8 +3983,9 @@ p, span, div, label, button, input, textarea, select {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    height: 100%;
-    min-height: 500px;
+    height: calc(100vh - 80px);
+    min-height: 600px;
+    padding: 20px;
 }
 
 /* Left Side: Large Interactive Map (60% width) */
@@ -6460,7 +6461,10 @@ button:hover, .btn:hover {
 
 .tesla-contact-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .tesla-contact-header .tesla-title {
@@ -6482,7 +6486,9 @@ button:hover, .btn:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Neon Card Styles */
@@ -6569,6 +6575,8 @@ button:hover, .btn:hover {
     margin-bottom: 2rem;
     background: rgba(0, 0, 0, 0.3);
     padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 12px;
     border: 1px solid rgba(0, 255, 136, 0.1);
 }
@@ -6621,6 +6629,9 @@ button:hover, .btn:hover {
 /* Contact Content */
 .tesla-contact-content {
     margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
 }
 
 .tesla-contact-tab {
